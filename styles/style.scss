@@ -1,0 +1,191 @@
+$home:'https://images.pexels.com/photos/598917/pexels-photo-598917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    position: absolute;
+    width: 415px;
+    height: 740px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: -1px 10px 20px grey;
+    overflow: hidden;
+    background-image: url($home);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    button {
+        position: absolute;
+        font-size: 15px;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: none;
+        outline: none;
+        color: white;
+        padding: 5px 10px;
+        border: 2px double white;
+        border-radius: 30px;
+        box-shadow: 0 0 3px white, 0 0 3px white inset;
+    }
+
+    .dummy {
+        width: 100%;
+        height: 100%;
+        display: none;
+        background-color: rgba($color: #000000, $alpha: .3);
+    }
+
+    .image-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        .swipe {
+            position: absolute;
+            display: none;
+            width: 300px;
+            height: 450px;
+        }
+
+        .close {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bottom: 5%;
+
+        }
+
+        %psedo-close {
+            content: '';
+            position: absolute;
+            height: 60%;
+            width: 2px;
+            background-color: white;
+
+        }
+
+        .close::before {
+            @extend %psedo-close;
+            transform: rotate(45deg);
+        }
+
+        .close::after {
+            @extend %psedo-close;
+            transform: rotate(-45deg);
+        }
+
+        .img {
+            position: absolute;
+            width: 250px;
+            height: 350px;
+            border-radius: 10px;
+            background-color: white;
+            border: 10px solid white;
+            overflow: hidden;
+            transition: all 1s ease;
+            pointer-events: none;
+            box-shadow: 0 0 3px #8686869d;
+
+            .image {
+                width: 100%;
+                height: 80%;
+                border-radius: 5px;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .text {
+                width: 100%;
+                padding: 10px 0 0 0;
+            }
+        }
+
+        .top {
+            transform: rotate(0deg);
+        }
+
+        .middle {
+            transform: rotate(7deg);
+        }
+
+        .bottom {
+            transform: rotate(14deg);
+        }
+
+        .flow {
+            position: absolute;
+            display: block;
+            width: 30px;
+            height: 30px;
+            border: 3px none white;
+            transform: rotate(45deg);
+        }
+
+        .next {
+            right: 5%;
+            border-right-style: solid;
+            border-top-style: solid;
+        }
+
+        .prev {
+            left: 5%;
+            border-left-style: solid;
+            border-bottom-style: solid;
+        }
+
+    }
+
+    .view {
+        display: flex;
+    }
+
+    .blur {
+        display: block;
+        backdrop-filter: blur(3px);
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    section {
+        width: 100vw;
+        height: 100%;
+
+        .image-container {
+            .img {
+                width: 70vw;
+                height: 90vw;
+                font-size: 3.5vw;
+                border-radius: 2vw;
+            }
+
+            .swipe {
+                display: block;
+            }
+
+            .flow {
+                display: none;
+            }
+        }
+    }
+
+}

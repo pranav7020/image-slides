@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <section class="gallery-container">
+        <button onclick="openGallery()">View Gallary</button>
+        <div class="dummy"></div>
+        <div class="image-container">
+            <div class="swipe"></div>
+            <div onclick="closeGallery()" class="close"></div>
+            <div class="img">
+                <img class="image"
+                    src="https://images.pexels.com/photos/1620815/pexels-photo-1620815.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+                    alt="image1">
+                <div class="text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, ratione.
+                </div>
+            </div>
+            <div class="img ">
+                <img class="image"
+                    src="https://images.pexels.com/photos/1620759/pexels-photo-1620759.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+                    alt="image1">
+                <div class="text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, ratione.
+                </div>
+            </div>
+            <div class="img ">
+                <img class="image"
+                    src="https://images.pexels.com/photos/1620758/pexels-photo-1620758.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+                    alt="image1">
+                <div class="text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, ratione.
+                </div>
+            </div>
+            <div class="img">
+                <img class="image"
+                    src="https://images.pexels.com/photos/1620760/pexels-photo-1620760.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+                    alt="image1">
+                <div class="text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, ratione.
+                </div>
+            </div>
+            <div class="img">
+                <img class="image"
+                    src="https://images.pexels.com/photos/1620783/pexels-photo-1620783.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+                    alt="image1">
+                <div class="text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, ratione.
+                </div>
+            </div>
+            <div onclick="next()" class="next flow"></div>
+            <div onclick="prev()" class="prev flow"></div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>

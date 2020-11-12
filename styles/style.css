@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section {
+  position: absolute;
+  width: 415px;
+  height: 740px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: -1px 10px 20px grey;
+          box-shadow: -1px 10px 20px grey;
+  overflow: hidden;
+  background-image: url("https://images.pexels.com/photos/598917/pexels-photo-598917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section button {
+  position: absolute;
+  font-size: 15px;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: none;
+  outline: none;
+  color: white;
+  padding: 5px 10px;
+  border: 2px double white;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 3px white, 0 0 3px white inset;
+          box-shadow: 0 0 3px white, 0 0 3px white inset;
+}
+
+section .dummy {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+section .image-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section .image-container .swipe {
+  position: absolute;
+  display: none;
+  width: 300px;
+  height: 450px;
+}
+
+section .image-container .close {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 5%;
+}
+
+section .image-container .close::before, section .image-container .close::after {
+  content: '';
+  position: absolute;
+  height: 60%;
+  width: 2px;
+  background-color: white;
+}
+
+section .image-container .close::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+section .image-container .close::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+section .image-container .img {
+  position: absolute;
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
+  background-color: white;
+  border: 10px solid white;
+  overflow: hidden;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  pointer-events: none;
+  -webkit-box-shadow: 0 0 3px #8686869d;
+          box-shadow: 0 0 3px #8686869d;
+}
+
+section .image-container .img .image {
+  width: 100%;
+  height: 80%;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+section .image-container .img .text {
+  width: 100%;
+  padding: 10px 0 0 0;
+}
+
+section .image-container .top {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+section .image-container .middle {
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
+}
+
+section .image-container .bottom {
+  -webkit-transform: rotate(14deg);
+          transform: rotate(14deg);
+}
+
+section .image-container .flow {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 3px none white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+section .image-container .next {
+  right: 5%;
+  border-right-style: solid;
+  border-top-style: solid;
+}
+
+section .image-container .prev {
+  left: 5%;
+  border-left-style: solid;
+  border-bottom-style: solid;
+}
+
+section .view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section .blur {
+  display: block;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    width: 100vw;
+    height: 100%;
+  }
+  section .image-container .img {
+    width: 70vw;
+    height: 90vw;
+    font-size: 3.5vw;
+    border-radius: 2vw;
+  }
+  section .image-container .swipe {
+    display: block;
+  }
+  section .image-container .flow {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
