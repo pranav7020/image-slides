@@ -66,10 +66,8 @@ const swipeLeft = () => {
 }
 
 const swipeRight = () => {
-    if (card === 1) {
+    if (card === 1)
         image[card - 1].style.transform = 'rotate(14deg)';
-        card += 1;
-    }
     if (card < totalImages) {
         image[card].style.transform = 'rotate(7deg)';
         image[card + 1].style.transform = 'rotate(0deg)';
