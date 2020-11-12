@@ -136,21 +136,6 @@ section .image-container .img .text {
   padding: 10px 0 0 0;
 }
 
-section .image-container .top {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-
-section .image-container .middle {
-  -webkit-transform: rotate(7deg);
-          transform: rotate(7deg);
-}
-
-section .image-container .bottom {
-  -webkit-transform: rotate(14deg);
-          transform: rotate(14deg);
-}
-
 section .image-container .flow {
   position: absolute;
   display: block;
